@@ -1,4 +1,4 @@
-package servlets;
+package com.example.generactive_tomcat;
 
 import Generactive.model.Item;
 import Generactive.model.StockItem;
@@ -19,8 +19,7 @@ import java.io.PrintWriter;
 import java.util.stream.Collectors;
 
 
-@WebServlet(name = "itemsServlet", value = "/items")
-
+@WebServlet(name = "itemsServlet", value = "/items/*")
 public class itemsServlet extends HttpServlet {
     private final ItemRepository items = ItemRepository.getInstance();
 
